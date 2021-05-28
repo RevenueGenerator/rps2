@@ -22,14 +22,25 @@ function playRound(playerSelection, computerSelection) {
     }
   }
 
-
 function computerPlay(){
     const computerOption = ["rock", "paper", "scissors"];
-    const computerSelection = Math.floor(Math.random() * computerOption.length);
+    let computerSelection = Math.floor(Math.random() * computerOption.length);
+    if (computerSelection === 0) {
+        return "rock";
+    }
+    if (computerSelection === 1) {
+        return "scissors";
+    }
+    if (computerSelection === 2) {
+        return "paper";
+    }
 }
 
 
   const playerSelection = "rock";
   const computerSelection = computerPlay();
   
+
+//console.log(computerPlay)
+
   console.log(playRound(playerSelection, computerSelection));
